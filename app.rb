@@ -9,3 +9,8 @@ require 'sinatra/contrib'
 get '/' do
   erb :index
 end
+
+# On '/search', do this...
+get '/search' do
+  erb :result
+end
