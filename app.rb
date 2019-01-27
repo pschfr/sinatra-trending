@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/' do
-	'Put this in your pipe & smoke it!'
+	erb :index
 end
