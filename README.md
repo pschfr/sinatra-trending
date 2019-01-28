@@ -1,2 +1,2 @@
-# sinatra-test
-simple test of the rubygem sinatra and other tweaks
+# sinatra-trending
+Sinatra app that loads in the trending repos on GitHub.
