@@ -3,7 +3,6 @@ require 'bundler/setup'
 
 # Require the things!
 require 'sinatra'
-require 'sinatra/contrib'
 
 # On '/' page, do this...
 get '/' do
