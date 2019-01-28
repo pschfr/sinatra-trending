@@ -1,10 +1,14 @@
-<p>Put this in your pipe &amp; smoke it!</p>
-
 <ul>
 	<% @all_trending.each do |r| %>
 		<li>
-			<%= "<strong>#{r.name}</strong> (#{r.star_count} stargazers)" %>
-			<%= "&mdash; #{r.description}" %>
+			<a href="https://github.com/<%= r.name %>" target="_blank"><%= r.name %></a>
+			<small>
+				<%= r.lang %>
+				&mdash;
+				<%= r.all_star_count %> &starf;
+			</small>
+			<br/>
+			<%= r.description %>
 		</li>
 	<% end %>
 </ul>
