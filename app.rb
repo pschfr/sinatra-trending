@@ -4,6 +4,7 @@ require 'bundler/setup'
 # Require the things!
 require 'git-trend'
 require 'sinatra'
+require 'sprockets'
 
 # On '/' page, do this...
 get '/' do
