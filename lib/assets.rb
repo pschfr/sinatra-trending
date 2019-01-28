@@ -4,7 +4,7 @@ module Assets
     environment = Sprockets::Environment.new root_path
     environment.append_path 'assets'
     environment.append_path 'vendor/bundle/gems/'
-    environment.append_path 'vendor/bundle/ruby/2.5.3/gems'
+    environment.append_path 'vendor/bundle/ruby/2.5.0/gems'
     environment
   end
 end
