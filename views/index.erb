@@ -1,3 +1,13 @@
+<label for="lang">
+	Language:<br/>
+	<select name="lang" id="lang">
+		<option value="">All Languages</option>
+		<% @languages.each do |lang| %>
+			<option value="<%= lang %>"><%= lang %></option>
+		<% end %>
+	</select>
+</label>
+
 <ul>
 	<% @all_trending.each do |r| %>
 		<li>

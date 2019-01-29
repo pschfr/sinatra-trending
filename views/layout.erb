@@ -3,8 +3,11 @@
 	<head>
 		<title>sinatra-trending</title>
 		<link rel="stylesheet" href="assets/app.css">
+		<script src="assets/app.js" defer></script>
 	</head>
 	<body>
+		<%= erb :_header %>
 		<%= yield %>
+		<%= erb :_footer %>
 	</body>
 </html>

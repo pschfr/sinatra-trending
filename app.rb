@@ -8,8 +8,9 @@ require 'sprockets'
 
 # On '/' page, do this...
 get '/' do
-  # Get all trending repos
-  @all_trending = GitTrend.get
+  # Get all trending repos and languages
+  @all_trending = GitTrend.get(params['lang'])
+  @languages = GitTrend.languages
 
   # Render index page
   erb :index
