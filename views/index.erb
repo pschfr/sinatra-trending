@@ -7,6 +7,14 @@
 		<% end %>
 	</select>
 </label>
+<br/>
+<label for="time">
+	Time:<br/>
+	<select name="time" id="time">
+		<option value="daily">Daily</option>
+		<option value="weekly">Weekly</option>
+	</select>
+</label>
 
 <ul>
 	<% @all_trending.each do |r| %>
