@@ -1,7 +1,13 @@
 source 'https://rubygems.org'
 
+# The ever so popular front end framework
+gem 'bootstrap'
+
 # Fetches trending repositories from GitHub
 gem 'git-trend'
+
+# Unfortunately, necessary for Bootstrap's JS
+gem 'jquery-rails'
 
 # CSS preprocessor
 gem 'sass'
@@ -14,9 +20,3 @@ gem 'sinatra-contrib'
 
 # Asset (CSS and JS) handler
 gem 'sprockets'
-
-# These gems come from rails-assets.org instead
-source 'https://rails-assets.org' do
-  # Normalize.css, but SCSS for usage with Sass
-  gem 'rails-assets-normalize-scss'
-end
