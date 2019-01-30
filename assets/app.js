@@ -2,4 +2,5 @@
 //= require popper_js-1.14.5/assets/javascripts/popper
 //= require bootstrap-4.1.3/assets/javascripts/bootstrap
 //= require rails-assets-bootstrap-table-1.12.1/app/assets/javascripts/bootstrap-table/bootstrap-table
+//= require rails-assets-bootstrap-table-1.12.1/app/assets/javascripts/bootstrap-table/extensions/key-events/bootstrap-table-key-events
 //= require javascripts/languages
