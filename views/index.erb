@@ -16,17 +16,37 @@
 	</select>
 </label>
 
-<ul id="repos">
-	<% @all_trending.each do |r| %>
-		<li>
-			<a href="https://github.com/<%= r.name %>" target="_blank"><%= r.name %></a>
-			<small>
-				<%= r.lang %>
-				&mdash;
-				<%= r.all_star_count %> &starf;
-			</small>
-			<br/>
-			<%= r.description %>
-		</li>
-	<% end %>
-</ul>
+<table class="table table-striped" data-toggle="table"
+  data-pagination="true"
+  data-search="true">
+	<thead>
+		<tr>
+			<th scope="col" data-sortable="true">#</th>
+			<th scope="col" data-sortable="true">Name</th>
+			<th scope="col" data-sortable="true">Language</th>
+			<th scope="col" data-sortable="true">&starf;</th>
+			<th scope="col" data-sortable="true">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @all_trending.each_with_index do |repo, index| %>
+			<tr>
+				<td scope="row">
+					<%= index + 1 %>
+				</td>
+				<td>
+					<a href="https://github.com/<%= repo.name %>" target="_blank"><%= repo.name %></a>
+				</td>
+				<td>
+					<%= repo.lang %>
+				</td>
+				<td>
+					<%= repo.all_star_count %>
+				</td>
+				<td>
+					<%= repo.description %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

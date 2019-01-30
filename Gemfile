@@ -9,6 +9,9 @@ gem 'git-trend'
 # Unfortunately, necessary for Bootstrap's JS
 gem 'jquery-rails'
 
+# Additional table plugin for Bootstrap's tables
+gem 'rails-assets-bootstrap-table', source: 'https://rails-assets.org'
+
 # CSS preprocessor
 gem 'sass'
 

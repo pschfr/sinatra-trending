@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionpack (5.2.2)
       actionview (= 5.2.2)
@@ -86,6 +87,7 @@ GEM
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
+    rails-assets-bootstrap-table (1.12.1)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -139,6 +141,7 @@ DEPENDENCIES
   bootstrap
   git-trend
   jquery-rails
+  rails-assets-bootstrap-table!
   sass
   sinatra
   sinatra-contrib
