@@ -17,9 +17,3 @@ get '/' do
   # Render index page
   erb :index
 end
-
-# On '/search', do this...
-get '/search' do
-  # Render result page
-  erb :result
-end
