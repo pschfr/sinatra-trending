@@ -1,24 +1,29 @@
-<label for="lang">
-	Language:<br/>
-	<select name="lang" id="lang">
-		<option value="">All Languages</option>
-		<% @languages.each do |lang| %>
-			<option value="<%= lang %>"><%= lang %></option>
-		<% end %>
-	</select>
-</label>
-<br/>
-<label for="time">
-	Time:<br/>
-	<select name="time" id="time">
-		<option value="daily">Daily</option>
-		<option value="weekly">Weekly</option>
-	</select>
-</label>
+<form>
+	<div class="row">
+		<div class="col">
+			<label for="lang">
+				Language:<br/>
+				<select name="lang" id="lang" class="form-control">
+					<option value="">All Languages</option>
+						<% @languages.each do |lang| %>
+							<option value="<%= lang %>"><%= lang %></option>
+						<% end %>
+				</select>
+			</label>
+		</div>
+		<div class="col">
+			<label for="time">
+				Time:<br/>
+				<select name="time" id="time" class="form-control">
+					<option value="daily">Daily</option>
+					<option value="weekly">Weekly</option>
+				</select>
+			</label>
+		</div>
+	</div>
+</form>
 
-<table class="table table-striped" data-toggle="table"
-  data-pagination="true"
-  data-search="true">
+<table class="table" data-toggle="table" data-classes="table-striped" data-pagination="true" data-search="true" data-search-align="left" data-show-columns="true" data-show-toggle="true" data-key-events="true">
 	<thead>
 		<tr>
 			<th scope="col" data-sortable="true">#</th>
@@ -30,7 +35,7 @@
 	</thead>
 	<tbody>
 		<% @all_trending.each_with_index do |repo, index| %>
-			<tr>
+			<tr data-unique-id="<%= index + 1 %>">
 				<td scope="row">
 					<%= index + 1 %>
 				</td>
