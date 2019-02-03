@@ -1,3 +1,5 @@
+require 'sprockets'
+
 # Sets up Sprockets
 module Assets
   def self.environment(root_path)

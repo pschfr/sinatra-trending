@@ -5,7 +5,6 @@ require 'bundler/setup'
 require 'git-trend'
 require 'sinatra'
 require 'sinatra/cookies'
-require 'sprockets'
 
 # On '/' page, do this...
 get '/' do
