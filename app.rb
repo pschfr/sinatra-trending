@@ -6,13 +6,16 @@ require 'git-trend'
 require 'sinatra'
 require 'sinatra/cookies'
 
+# This is run on initialization
+configure do
+  # Gets possible languages from GitHub
+  set :languages, GitTrend.languages
+end
+
 # On '/' page, do this...
 get '/' do
-  # Gets all trending repos and languages from GitHub,
-  # while getting selected language and time from the cookies (if set).
+  # Gets the trending repos, based on the time and language set in cookies.
   @all_trending = GitTrend.get(language: cookies[:lang], since: cookies[:time])
-  @languages = GitTrend.languages
-
   # Render index page
   erb :index
 end
