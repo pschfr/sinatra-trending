@@ -14,8 +14,15 @@ end
 
 # On '/' page, do this...
 get '/' do
-  # Gets the trending repos, based on the time and language set in cookies.
-  @all_trending = GitTrend.get(language: cookies[:lang], since: cookies[:time])
+  # Attempts to protect Sinatra from reciving an Exception instead of data.
+  begin
+    # Gets the trending repos, based on the time and language set in cookies.
+    @all_trending = GitTrend.get(language: cookies[:lang], since: cookies[:time])
+  rescue
+    # Otherwise, send nothing.
+    @all_trending = nil
+  end
+
   # Render index page
   erb :index
 end

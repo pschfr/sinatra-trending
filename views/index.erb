@@ -35,24 +35,27 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @all_trending.each_with_index do |repo, index| %>
-			<tr data-unique-id="<%= index + 1 %>">
-				<td scope="row">
-					<%= index + 1 %>
-				</td>
-				<td>
-					<a href="https://github.com/<%= repo.name %>" target="_blank"><%= repo.name %></a>
-				</td>
-				<td>
-					<%= repo.lang %>
-				</td>
-				<td>
-					<%= repo.all_star_count %>
-				</td>
-				<td>
-					<%= repo.description %>
-				</td>
-			</tr>
+		<%# If @all_trending is not empty, loop over the repos. %>
+		<% if !@all_trending.nil? %>
+			<% @all_trending.each_with_index do |repo, index| %>
+				<tr data-unique-id="<%= index + 1 %>">
+					<td scope="row">
+						<%= index + 1 %>
+					</td>
+					<td>
+						<a href="https://github.com/<%= repo.name %>" target="_blank"><%= repo.name %></a>
+					</td>
+					<td>
+						<%= repo.lang %>
+					</td>
+					<td>
+						<%= repo.all_star_count %>
+					</td>
+					<td>
+						<%= repo.description %>
+					</td>
+				</tr>
+			<% end %>
 		<% end %>
 	</tbody>
 </table>
