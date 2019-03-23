@@ -1,16 +1,10 @@
 <header>
 	<nav class="navbar navbar-fluid navbar-expand-md navbar-dark bg-dark">
 		<a class="navbar-brand" href="/">Trending on GitHub</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item <% if request.path_info == '/' %>active<% end %>">
-					<a class="nav-link" href="/">Home <% if request.path_info == '/' %><span class="sr-only">(current)</span><% end %></a>
-				</li>
-			</ul>
+		<div class="collapse navbar-collapse" id="navbarContent">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 					<a class="nav-link" href="https://github.com/pschfr/sinatra-trending" target="_blank">Source</a>
