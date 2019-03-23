@@ -3,5 +3,6 @@
 //= require bootstrap-4.3.1/assets/javascripts/bootstrap
 //= require rails-assets-bootstrap-table-1.12.1/app/assets/javascripts/bootstrap-table/bootstrap-table
 //= require rails-assets-bootstrap-table-1.12.1/app/assets/javascripts/bootstrap-table/extensions/key-events/bootstrap-table-key-events
+//= require rails-assets-bootstrap-table-1.12.1/app/assets/javascripts/bootstrap-table/extensions/cookie/bootstrap-table-cookie
 //= require javascripts/languages
 //= require javascripts/formatting
