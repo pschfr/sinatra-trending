@@ -45,9 +45,9 @@
 		</tr>
 	</thead>
 	<tbody>
-		<%# If @all_trending is not empty, loop over the repos. %>
-		<% if !@all_trending.nil? %>
-			<% @all_trending.each_with_index do |repo, index| %>
+		<%# If @trending is not empty, loop over the repos. %>
+		<% if !@trending.nil? %>
+			<% @trending.each_with_index do |repo, index| %>
 				<tr data-unique-id="<%= index + 1 %>">
 					<td scope="row" data-field="id">
 						<%= index + 1 %>
