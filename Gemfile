@@ -9,6 +9,9 @@ gem 'git-trend'
 # Unfortunately, necessary for Bootstrap's JS
 gem 'jquery-rails'
 
+# Optimized JSON library
+gem 'oj'
+
 # Only loaded in dev or test env
 group :development, :test do
   # Relaunches the program on filesystem change
