@@ -4,5 +4,7 @@
 //= require rails-assets-bootstrap-table-1.12.1/app/assets/javascripts/bootstrap-table/bootstrap-table
 //= require rails-assets-bootstrap-table-1.12.1/app/assets/javascripts/bootstrap-table/extensions/key-events/bootstrap-table-key-events
 //= require rails-assets-bootstrap-table-1.12.1/app/assets/javascripts/bootstrap-table/extensions/cookie/bootstrap-table-cookie
+//= require rails-assets-timeago.js-3.0.0/app/assets/javascripts/timeago.js/timeago
 //= require javascripts/languages
 //= require javascripts/formatting
+//= require javascripts/timeago

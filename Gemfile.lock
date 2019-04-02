@@ -92,6 +92,7 @@ GEM
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails-assets-bootstrap-table (1.12.1)
+    rails-assets-timeago.js (3.0.0)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -162,6 +163,7 @@ DEPENDENCIES
   git-trend
   jquery-rails
   rails-assets-bootstrap-table!
+  rails-assets-timeago.js!
   rerun
   sass
   sinatra

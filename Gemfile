@@ -9,9 +9,6 @@ gem 'git-trend'
 # Unfortunately, necessary for Bootstrap's JS
 gem 'jquery-rails'
 
-# Additional table plugin for Bootstrap's tables
-gem 'rails-assets-bootstrap-table', source: 'https://rails-assets.org'
-
 # Only loaded in dev or test env
 group :development, :test do
   # Relaunches the program on filesystem change
@@ -29,3 +26,11 @@ gem 'sinatra-contrib'
 
 # Asset (CSS and JS) handler
 gem 'sprockets'
+
+# Gems from rails-assets.org
+source 'https://rails-assets.org' do
+  # Additional table plugin for Bootstrap's tables
+  gem 'rails-assets-bootstrap-table'
+  # Helps with "Last updated..."
+  gem 'rails-assets-timeago.js'
+end
