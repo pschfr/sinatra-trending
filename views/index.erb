@@ -63,7 +63,11 @@
 						<a href="https://github.com/<%= repo.name %>" target="_blank"><%= repo.name %></a>
 					</td>
 					<td data-field="lang">
-						<%= repo.lang %>
+						<% if !repo.lang.empty? %>
+							<%= repo.lang %>
+						<% else %>
+							&mdash;
+						<% end %>
 					</td>
 					<td data-field="stars">
 						<%= repo.all_star_count %>
