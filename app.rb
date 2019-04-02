@@ -1,7 +1,7 @@
-# Requires things from vendor/bundle instead of global PATH
+# Requires gems from vendor/bundle instead of global PATH
 require 'bundler/setup'
 
-# Require the things!
+# Require the gems used in this file
 require 'oj'
 require 'git-trend'
 require 'sinatra'
@@ -12,33 +12,38 @@ TRENDING_TMP_DIR = 'tmp/'.freeze
 TRENDING_TMP_FILE = 'trending.json'.freeze
 TRENDING_TMP_PATH = File.join(TRENDING_TMP_DIR, TRENDING_TMP_FILE).freeze
 
-# This is run on initialization
+# This is run on Sinatra initialization
 configure do
-  # Gets possible languages from GitHub
+  # Gets all possible languages from GitHub
   set :languages, GitTrend.languages
 end
 
 # On '/' page, do this...
 get '/' do
-  # if file exists, use it.
+  # If trending repo temp file exists, use it.
   if File.exist?(TRENDING_TMP_PATH)
     # Open and parse JSON
     @trending = Oj.load(File.open(TRENDING_TMP_PATH, 'rb').read)
   else
-    # Otherwise, attempt to make request.
-    # Attempts to protect Sinatra from reciving an Exception instead of data.
+    # Otherwise, attempt to make the request while protecting Sinatra from
+    # receiving an Exception instead of data.
     begin
       # Gets the trending repos, based on the time and language set in cookies.
       @trending = GitTrend.get(language: cookies[:lang], since: cookies[:time])
-      # Create temp directory if it doesn't exist
+
+      # Creates the temp directory if it doesn't exist
       Dir.mkdir(TRENDING_TMP_DIR) unless File.directory?(TRENDING_TMP_DIR)
-      # Attempt to write to local temp cache file
+
+      # Save trending repos to local temp cache file
       File.write(TRENDING_TMP_PATH, Oj.dump(@trending))
     rescue StandardError
       # Otherwise, send nothing.
       @trending = nil
     end
   end
+
+  # Either way at this point the file exists, so return the last modified time.
+  @updated = File.mtime(TRENDING_TMP_PATH)
 
   # Render index page
   erb :index
